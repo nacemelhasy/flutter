@@ -486,7 +486,7 @@ class CircularProgressIndicator extends ProgressIndicator {
   const CircularProgressIndicator({
     Key? key,
     double? value,
-    Color? backgroundColor,
+    Color? backgroundColor ,
     Color? color,
     Animation<Color?>? valueColor,
     this.strokeWidth = 4.0,
@@ -745,7 +745,7 @@ class RefreshProgressIndicator extends CircularProgressIndicator {
   const RefreshProgressIndicator({
     Key? key,
     double? value,
-    Color? backgroundColor,
+     Color? backgroundColor,
     Color? color,
     Animation<Color?>? valueColor,
     double strokeWidth = defaultStrokeWidth, // Different default than CircularProgressIndicator.

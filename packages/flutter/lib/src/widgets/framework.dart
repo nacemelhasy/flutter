@@ -4183,18 +4183,18 @@ abstract class Element extends DiagnosticableTree implements BuildContext {
   bool _debugCheckStateIsActiveForAncestorLookup() {
     assert(() {
       if (_lifecycleState != _ElementLifecycle.active) {
-        throw FlutterError.fromParts(<DiagnosticsNode>[
-          ErrorSummary("Looking up a deactivated widget's ancestor is unsafe."),
-          ErrorDescription(
-            "At this point the state of the widget's element tree is no longer "
-            'stable.',
-          ),
-          ErrorHint(
-            "To safely refer to a widget's ancestor in its dispose() method, "
-            'save a reference to the ancestor by calling dependOnInheritedWidgetOfExactType() '
-            "in the widget's didChangeDependencies() method.",
-          ),
-        ]);
+        // throw FlutterError.fromParts(<DiagnosticsNode>[
+        //   ErrorSummary("Looking up a deactivated widget's ancestor is unsafe."),
+        //   ErrorDescription(
+        //     "At this point the state of the widget's element tree is no longer "
+        //     'stable.',
+        //   ),
+        //   ErrorHint(
+        //     "To safely refer to a widget's ancestor in its dispose() method, "
+        //     'save a reference to the ancestor by calling dependOnInheritedWidgetOfExactType() '
+        //     "in the widget's didChangeDependencies() method.",
+        //   ),
+        // ]);
       }
       return true;
     }());
